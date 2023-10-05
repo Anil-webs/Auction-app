@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Auction</title>
+</head>
+<body style="text-align: center;">
+    <h2>Create Auction</h2>
+    <form method="POST" action="/create_auction">
+        <label for="item_name">Item Name:</label>
+        <input type="text" name="item_name" required><br><br>
+        <label for="start_price">Start Price:</label>
+        <input type="number" name="start_price" required><br><br>
+        <label for="start_time">Start Time:</label>
+        <input type="datetime-local" name="start_time" required><br><br>
+        <label for="end_time">End Time:</label>
+        <input type="datetime-local" name="end_time" required><br><br>
+        <input type="submit" value="Create Auction">
+    </form><br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

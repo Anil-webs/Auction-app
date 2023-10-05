@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auction App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="text-align: center;">
+    <h1>Welcome to the Auction App</h1>
+
+    <h2>Ongoing Auctions</h2>
+    <ul>
+        {% for auction in auctions %}
+            <li>
+                {{ auction.item_name }} - Current Price: ${{ auction.start_price }}
+                <a href="/bid/{{ loopbids }}">Place Bid</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>Create an Auction</h2>
+    <a href="/create_auction">Create New Auction</a>
+</body>
+</html>
